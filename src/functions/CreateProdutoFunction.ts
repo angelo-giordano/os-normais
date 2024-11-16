@@ -17,8 +17,6 @@ export async function CreateProdutoFunction(request: HttpRequest, context: Invoc
 
         return { status: 201, body: "Produto criado com sucesso." };
     } catch (error) {
-        context.log("ERROOOOOOOOOOOOOO em algo");
-        context.log(`Error: ${error}`);
         return { status: 500, body: "Erro ao criar produto." };
     }
 };
